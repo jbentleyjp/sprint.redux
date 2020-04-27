@@ -1,32 +1,52 @@
 import { createStore } from "redux"; //maybe require?
 
 
-//initial state
+// initial state
 const initialState = {
-    projects: {
-        id: "",
-        name: "",
-        url: "",
-        buildCommand: "",
-        language: "",
-    },
-    builds: {
-        buildNumber: 0000, // A continuous number incrementing for each build in a project
-        status: "", // One of "Pending" | "Running" | "Success" | "Failed"
-        output: "",
-    }
+  // because this is a nested object,
+  //  there may be issues with shallow copying
+  projects: {
+    id: "",
+    name: "",
+    url: "",
+    buildCommand: "",
+    language: "",
+  },
+  builds: {
+      buildNumber: 0000, // A continuous number incrementing for each build in a project
+      status: "", // One of "Pending" | "Running" | "Success" | "Failed"
+      output: "",
+  }
 };
 
-//reducer
+// reducer
 const reducer = (state = initialState, action) => {
-    switch(){
-        case 'somethinghere':
-        return {...state, somethingelsehere};
-        default:
-            return state;
-    }
+  switch(){
+    case 'somethinghere':
+    return {...state, somethingelsehere};
+    default:
+      return state;
+  }
 };
 
-//store
+// create the store
 const store = createStore(reducer);
-const render = 
+
+// make the store listen to actions
+store.subscribe(() => {
+  // make updates
+  render();
+});
+
+
+const render = () => {
+
+};
+
+//call render once
+render();
+
+//action creator
+const sdfkljskf = (someargument) => {
+  return {type: "ADSFS", payload: someargument};
+};
