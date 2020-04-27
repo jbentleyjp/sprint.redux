@@ -3,17 +3,17 @@ import { createStore } from "redux"; //maybe require?
 
 //initial state
 const initialState = {
-    "projects": {
-        "id": "",
-        "name": "",
-        "url": "",
-        "buildCommand": "",
-        "language": ""
+    projects: {
+        id: "",
+        name: "",
+        url: "",
+        buildCommand: "",
+        language: "",
     },
-    "builds": {
-        "buildNumber": 65481, // A continuous number incrementing for each build in a project
-        "status": "Failed", // One of "Pending" | "Running" | "Success" | "Failed"
-        "output": "48 out of 13325 Tests failed."
+    builds: {
+        buildNumber: 0000, // A continuous number incrementing for each build in a project
+        status: "", // One of "Pending" | "Running" | "Success" | "Failed"
+        output: "",
     }
 };
 
