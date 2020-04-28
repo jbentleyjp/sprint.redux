@@ -19,9 +19,9 @@ const initialState = {
   }
 };
 
-// reducer
+// reducer // make 2 reducers?
 const reducer = (state = initialState, action) => {
-  switch(){
+  switch(action.type){
     case 'somethinghere':
     return {...state, somethingelsehere};
     default:
@@ -50,3 +50,5 @@ render();
 const sdfkljskf = (someargument) => {
   return {type: "ADSFS", payload: someargument};
 };
+
+module.exports = store;
